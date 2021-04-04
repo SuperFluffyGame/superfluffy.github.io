@@ -87,14 +87,21 @@ html {
     grid-area: title;
     font-size: 30px;
 }
-
+#game {
+    color: blue;
+    grid-area: game;
+}
+#game:active {
+    color: darkblue;
+    
+}
 .grid2-container {
     margin-top: -10px;
     margin-bottom: 5px;
     align-content: middle;
     display: grid;
     font-size: 20px;
-    grid: 'title home yt link3'20px / 300px 100px 100px 100px;
+    grid: 'title home yt game'20px / 300px 100px 100px 100px;
 }
 
 .item2 {
@@ -102,7 +109,7 @@ html {
     margin-top: auto;
 }
 
-#link3,
+
 .link {
     margin: 0px;
     margin-top: 10px;
