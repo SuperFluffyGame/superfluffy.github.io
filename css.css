@@ -101,7 +101,7 @@ html {
     align-content: middle;
     display: grid;
     font-size: 20px;
-    grid: 'title home yt game subfolder'20px / 300px 100px 100px 100px 200px;
+    grid: 'title home yt game subfolder'20px / 300px 100px 100px 100px 100px;
 }
 
 .item2 {
