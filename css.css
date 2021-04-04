@@ -88,11 +88,11 @@ html {
     font-size: 30px;
 }
 #game {
-    color: blue;
+    color: lightblue;
     grid-area: game;
 }
 #game:active {
-    color: darkblue;
+    color: blue;
     
 }
 .grid2-container {
