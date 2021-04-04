@@ -101,7 +101,7 @@ html {
     align-content: middle;
     display: grid;
     font-size: 20px;
-    grid: 'title home yt game'20px / 300px 100px 100px 100px;
+    grid: 'title home yt game subfolder'20px / 300px 100px 100px 100px 200px;
 }
 
 .item2 {
@@ -113,4 +113,11 @@ html {
 .link {
     margin: 0px;
     margin-top: 10px;
+}
+#sub {
+    color: yellow;   
+    grid-area: subfolder;
+}
+#sub:active {
+    color: orange;   
 }
