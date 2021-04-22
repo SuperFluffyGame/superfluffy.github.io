@@ -1,0 +1,27 @@
+table,
+th,
+td,
+tr {
+  margin: auto;
+  color: white;
+  border: 1px solid white;
+  padding: 0 5px;
+  border-collapse: collapse;
+}
+th {
+  font-size: 25px;
+}
+td {
+  font-size: 20;
+  padding: 5px;
+}
+h1 {
+text-decoration: underline;
+  color: white;
+  width: 260px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+html {
+  background: #101010
+}
