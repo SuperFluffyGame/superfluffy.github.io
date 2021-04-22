@@ -100,7 +100,8 @@ html {
     align-content: middle;
     display: grid;
     font-size: 20px;
-    grid: 'title home yt game subfolder'20px / 300px 100px 100px 100px 100px;
+    grid:
+        'title home yt game subfolder pen'20px / 300px 100px 100px 100px 100px 100px;
 }
 
 .item2 {
@@ -119,4 +120,12 @@ html {
 }
 #sub:active {
     color: orange;   
+}
+#pen {
+    color: lightblue;
+    grid-area: pen;
+}
+#pen:active {
+    color: cyan;   
+    
 }
