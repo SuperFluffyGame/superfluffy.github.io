@@ -1,0 +1,184 @@
+html {
+  background: darkslategray;
+}
+
+.welcome {
+  position: fixed;
+  padding: 4vh 0 0 0;
+  width: calc(100vw - 5);
+  height: 10vh;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: calc(-8px - 5px) auto auto auto;
+  font-family: arial;
+  font-size: 6vh;
+  border: 5px solid navy;
+  border-radius: 5px;
+  background: lightgray;
+}
+
+svg {
+  position: fixed;
+  top: 2.5vh;
+  left: 2.5vh;
+  margin: 0;
+}
+
+#one {
+  fill: blue;
+}
+
+#two {
+  fill: green;
+}
+
+#ell {
+  fill: darkblue;
+}
+
+.sold {
+  position: absolute;
+  z-index: 6;
+  font-size: 5vh;
+  width: 50vw;
+  height: 10vh;
+  bottom: -100vh;
+  left: 0;
+  right: 0;
+  margin: auto auto auto auto;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+#three {
+  fill: #AAAAAAAA
+}
+
+.motto {
+  color: gold;
+  z-index: -1;
+  position: absolute;
+  width: 100vw;
+  height: 10vh;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  font-size: 5vh;
+  font-family: arial;
+  top: 18vh;
+}
+
+.info {
+  position: relative;
+  bottom: -200vh;
+}
+
+.text {
+  z-index: -1;
+  text-align: center;
+  position: relative;
+  top: 25vh;
+  padding: 0 30vw;
+  color: white;
+  font-size: 3.25vh;
+}
+
+.thing2 {
+  z-index: -2;
+  position: absolute;
+  width: calc(431.25px / 3);
+  height: 300px;
+  background: lightblue;
+  margin: 320px 0 0 0;
+  top: 40vh;
+  border: 2px solid gray;
+}
+
+#front {
+  left: calc(50vw - (431.25px / 2));
+}
+
+#center {
+  left: calc(50vw - (431.25px / 6));
+}
+
+#back {
+  left: calc(50vw + (431.25px / 6));
+}
+
+.thingTitle {
+  z-index: -1;
+  font-family: arial;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  color: lightblue;
+  font-size: 40px;
+  width: calc(431.25px / 3);
+  height: 20px;
+  position: absolute;
+  text-align: left;
+  left: 5px;
+}
+
+.thingTitle2 {
+  left: auto;
+  text-align: right;
+  top: 40px;
+  right: 5px;
+}
+
+.thingMotto {
+  position: absolute;
+  bottom: 50px;
+  width: calc(431.25px / 3.1);
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.price {
+  position: absolute;
+  width: calc(431.25px / 3.1);
+  height: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+.mid {
+  position: absolute;
+  width: calc(431.25px / 3.1);
+  height: 20px;
+  font-size: 11.5px;
+  text-align: center;
+}
+.link {
+  position: fixed;
+  font-size: 4vh;
+  right: 15px;
+}
+button {
+  font-size: 30px;
+  z-index: -1;
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  left: 0;
+  right: 0;
+  bottom: -400px;
+  margin: auto;
+  border: 2px outset darkslategray;
+  outline: 0;
+  background: darkgray;
+}
+p {
+  font-size: 30px;
+  z-index: 0;
+  color: white;
+  position: absolute;
+  width: 140px;
+  height: 50px;
+  left: 0;
+  right: 0;
+  bottom: -450px;
+  margin: auto;
+}
