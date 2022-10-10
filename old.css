@@ -1,0 +1,131 @@
+html {
+    background: #202020;
+}
+
+.grid-container {
+    display: grid;
+    padding: 0px 20px;
+    grid:
+        'header header header'100px 
+        'left main right'400px 
+        'footer footer footer'40px 
+       / 1fr 3fr 1fr;
+    grid-gap: 20px;
+}
+
+.item {
+    padding: 5vh 20px;
+    margin: 0;
+    text-align: center;
+    color: white;
+    background: #202020;
+}
+
+#header {
+    text-align: left;
+    width: 100%;
+    position: fixed;
+    color: white;
+    left: 0;
+    right: 0;
+    margin: -10px auto;
+    align-content: center;
+    grid-area: header;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid orange;
+    border-radius: 5px;
+}
+
+#left {
+    padding-top: 0px;
+    grid-area: left;
+    border-radius: 10px;
+    background: #181818;
+    border: 1px solid orange
+}
+
+#main {
+    grid-area: main;
+    padding:20px 200px;
+}
+
+#right {
+   padding-top: 0px;
+    grid-area: right;
+    border-radius: 10px;
+    background: #181818;
+    border: 1px solid orange
+}
+
+#footer {
+    grid-area: footer;
+    padding: 0;
+    margin: 0;
+}
+
+#home {
+    color: lime;
+    grid-area: home;
+}
+
+#home:active {
+    color: green;
+}
+
+#yt {
+    color: red;
+    grid-area: yt;
+}
+
+#yt:active {
+    color: maroon;
+}
+
+#title2 {
+    grid-area: title;
+    font-size: 30px;
+}
+#game {
+    color: lightblue;
+    grid-area: game;
+}
+#game:active {
+    color: blue;
+    
+}
+.grid2-container {
+    margin-top: -10px;
+    margin-bottom: 5px;
+    align-content: middle;
+    display: grid;
+    font-size: 20px;
+    grid:
+        'title home yt game subfolder pen'20px / 300px 100px 100px 100px 100px 100px;
+}
+
+.item2 {
+    text-align: center;
+    margin-top: auto;
+}
+
+
+.link {
+    margin: 0px;
+    margin-top: 10px;
+}
+#sub {
+    color: yellow;   
+    grid-area: subfolder;
+}
+#sub:active {
+    color: orange;   
+}
+#pen {
+    color: lightblue;
+    grid-area: pen;
+}
+#pen:active {
+    color: cyan;   
+    
+}

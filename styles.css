@@ -1,0 +1,55 @@
+body {
+    background-color: #222;
+    color: whitesmoke;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    margin: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+.usernames {
+    margin-bottom: 1rem;
+}
+
+td {
+    padding: 0.25rem;
+    border: 2px solid #999;
+}
+
+td:first-child {
+    min-width: 5rem;
+}
+
+.project {
+    background-color: #333;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+}
+
+.project-header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.project-header > h3 {
+    margin-block: 0.5rem;
+}
+
+.project-link {
+    width: 1.75rem;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a:hover {
+    filter: brightness(80%);
+}
+
+.project-link > img {
+    width: 100%;
+}
