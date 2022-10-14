@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="/minesweeper/dev/favicon.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            rel="stylesheet"
+        />
+
+        <meta name="viewport" content="width=device-width" />
+        <meta http-equiv="content-security-policy" content=""><title>MineSweeper</title>
+		<link href="/minesweeper/dev/_app/immutable/assets/_layout-ab9de344.css" rel="stylesheet">
+		<link href="/minesweeper/dev/_app/immutable/assets/_page-8d1fc661.css" rel="stylesheet">
+		<link href="/minesweeper/dev/_app/immutable/assets/SidebarLayout-12c87d52.css" rel="stylesheet">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/start-1ba443bf.js">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/index-2c492789.js">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/singletons-093c55a9.js">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/components/pages/_layout.svelte-302cc7f7.js">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/_layout-1daba58d.js">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/components/pages/game/_page.svelte-797fab3f.js">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/SidebarLayout-a411d9df.js">
+    </head>
+    <body>
+        
+
+
+
+<main class="wrapper svelte-1oaj3m2"><aside class="sidebar svelte-1oaj3m2"><header class="svelte-1oaj3m2"><h1 id="title" class="svelte-1oaj3m2">MineSweeper</h1>
+            <h3 id="creator" class="svelte-1oaj3m2">By SFG and TMH</h3></header>
+        <hr class="svelte-1oaj3m2">
+        </aside>
+
+    
+
+    <div class="wrapper svelte-4buqi6" slot="content"><div class="board svelte-h57i0c" style="grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr);">Loading...
+</div>
+        <dialog class="aftergame-modal svelte-4buqi6"><div class="modal-main svelte-4buqi6">
+
+                <div class="keep-game-wrapper svelte-4buqi6"><p class="svelte-4buqi6">Keep Game</p>
+                    <div class="wrapper svelte-1aqw2ej"><input type="checkbox" checked class="svelte-1aqw2ej" checked>
+    <img src="/minesweeper/dev/_app/immutable/assets/check-ce7a5ec0.svg" alt="" class="svelte-1aqw2ej">
+</div></div>
+
+                <div class="buttons-container-vertical svelte-4buqi6"><button class="goto-menu">Back to Menu</button>
+                    <button class="new-game">New Game</button></div></div>
+            </dialog></div>
+    <footer class="version svelte-1oaj3m2">v0.2.0</footer>
+</main>
+
+
+
+
+		<script type="module" data-sveltekit-hydrate="1475t1">
+			import { start } from "/minesweeper/dev/_app/immutable/start-1ba443bf.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 3],
+					params: {},
+					routeId: "game",
+					data: (function(a){return [a,a]}(null)),
+					form: null
+				},
+				paths: {"base":"/minesweeper/dev","assets":"/minesweeper/dev"},
+				target: document.querySelector('[data-sveltekit-hydrate="1475t1"]').parentNode,
+				trailing_slash: "never"
+			});
+		</script>
+	
+    </body>
+</html>
