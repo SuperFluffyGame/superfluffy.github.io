@@ -20,12 +20,12 @@
     "src": "src/lib/assets/red_mine.jpg"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-c5903b33.js",
+    "file": "_app/immutable/start-3561c038.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-2c492789.js",
-      "_singletons-4d4216e6.js"
+      "_singletons-f7e93100.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -46,22 +46,22 @@
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-350399bf.js",
+    "file": "_app/immutable/components/error.svelte-f83874a1.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
       "_index-2c492789.js",
-      "_singletons-4d4216e6.js"
+      "_singletons-f7e93100.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-38e75f24.js",
+    "file": "_app/immutable/components/pages/_page.svelte-b0c9e78d.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-2c492789.js",
-      "_SidebarLayout-0561206a.js",
-      "_singletons-4d4216e6.js"
+      "_SidebarLayout-4566bcb6.js",
+      "_singletons-f7e93100.js"
     ],
     "css": [
       "_app/immutable/assets/_page-029ddea7.css"
@@ -72,13 +72,13 @@
     ]
   },
   "src/routes/game/+page.svelte": {
-    "file": "_app/immutable/components/pages/game/_page.svelte-8651c6b5.js",
+    "file": "_app/immutable/components/pages/game/_page.svelte-f102a6c3.js",
     "src": "src/routes/game/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-2c492789.js",
-      "_SidebarLayout-0561206a.js",
-      "_singletons-4d4216e6.js"
+      "_SidebarLayout-4566bcb6.js",
+      "_singletons-f7e93100.js"
     ],
     "css": [
       "_app/immutable/assets/_page-8d1fc661.css"
@@ -97,8 +97,8 @@
       "__layout-1daba58d.js"
     ]
   },
-  "_singletons-4d4216e6.js": {
-    "file": "_app/immutable/chunks/singletons-4d4216e6.js",
+  "_singletons-f7e93100.js": {
+    "file": "_app/immutable/chunks/singletons-f7e93100.js",
     "imports": [
       "_index-2c492789.js"
     ]
@@ -109,10 +109,10 @@
   "__layout-1daba58d.js": {
     "file": "_app/immutable/chunks/_layout-1daba58d.js"
   },
-  "_SidebarLayout-0561206a.js": {
-    "file": "_app/immutable/chunks/SidebarLayout-0561206a.js",
+  "_SidebarLayout-4566bcb6.js": {
+    "file": "_app/immutable/chunks/SidebarLayout-4566bcb6.js",
     "imports": [
-      "_singletons-4d4216e6.js",
+      "_singletons-f7e93100.js",
       "_index-2c492789.js"
     ],
     "css": [
@@ -129,7 +129,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-9f2cb7c4.js",
+    "file": "_app/immutable/chunks/1-3cda7f1c.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -137,7 +137,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-ed481d00.js",
+    "file": "_app/immutable/chunks/2-572cd7d4.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -145,7 +145,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-4ec5f20c.js",
+    "file": "_app/immutable/chunks/3-5898876b.js",
     "src": ".svelte-kit/generated/nodes/3.js",
     "isDynamicEntry": true,
     "imports": [
@@ -160,12 +160,12 @@
     "file": "_app/immutable/assets/SidebarLayout-12c87d52.css",
     "src": "SidebarLayout.css"
   },
-  "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-029ddea7.css",
-    "src": "src/routes/+page.css"
-  },
   "src/routes/game/+page.css": {
     "file": "_app/immutable/assets/_page-8d1fc661.css",
     "src": "src/routes/game/+page.css"
+  },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/_page-029ddea7.css",
+    "src": "src/routes/+page.css"
   }
 }
