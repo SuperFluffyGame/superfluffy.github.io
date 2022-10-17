@@ -1,35 +1,31 @@
 {
-  "src/lib/assets/back_arrow.svg": {
-    "file": "_app/immutable/assets/back_arrow-fef05adc.svg",
-    "src": "src/lib/assets/back_arrow.svg"
-  },
   "src/lib/assets/check.svg": {
     "file": "_app/immutable/assets/check-ce7a5ec0.svg",
     "src": "src/lib/assets/check.svg"
-  },
-  "src/lib/assets/delete.svg": {
-    "file": "_app/immutable/assets/delete-685fc792.svg",
-    "src": "src/lib/assets/delete.svg"
   },
   "src/lib/assets/play.svg": {
     "file": "_app/immutable/assets/play-8408aa2d.svg",
     "src": "src/lib/assets/play.svg"
   },
-  "src/lib/assets/red_flag.jpg": {
-    "file": "_app/immutable/assets/red_flag-cf5f7b44.jpg",
-    "src": "src/lib/assets/red_flag.jpg"
+  "src/lib/assets/delete.svg": {
+    "file": "_app/immutable/assets/delete-685fc792.svg",
+    "src": "src/lib/assets/delete.svg"
   },
   "src/lib/assets/red_mine.jpg": {
     "file": "_app/immutable/assets/red_mine-cc7afd62.jpg",
     "src": "src/lib/assets/red_mine.jpg"
   },
+  "src/lib/assets/red_flag.jpg": {
+    "file": "_app/immutable/assets/red_flag-cf5f7b44.jpg",
+    "src": "src/lib/assets/red_flag.jpg"
+  },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-f4fa33ad.js",
+    "file": "_app/immutable/start-c1a55fdd.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-18b70ca5.js",
-      "_singletons-0556e34e.js"
+      "_index-35a657ee.js",
+      "_singletons-c694b127.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -39,53 +35,53 @@
     ]
   },
   "src/routes/+layout.svelte": {
-    "file": "_app/immutable/components/pages/_layout.svelte-3f1c9e83.js",
+    "file": "_app/immutable/components/pages/_layout.svelte-51d0e69c.js",
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-18b70ca5.js"
+      "_index-35a657ee.js"
     ],
     "css": [
       "_app/immutable/assets/_layout-ab9de344.css"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-7f61933e.js",
+    "file": "_app/immutable/components/error.svelte-4c39b2b9.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index-18b70ca5.js",
-      "_singletons-0556e34e.js"
+      "_index-35a657ee.js",
+      "_singletons-c694b127.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-c47aa829.js",
+    "file": "_app/immutable/components/pages/_page.svelte-ade75d3b.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-18b70ca5.js",
-      "_SidebarLayout-e35b4d0b.js",
-      "_singletons-0556e34e.js"
+      "_index-35a657ee.js",
+      "_SidebarLayout-8ba9c7de.js",
+      "_singletons-c694b127.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-c6385d83.css"
+      "_app/immutable/assets/_page-9332dbc1.css"
     ],
     "assets": [
       "_app/immutable/assets/delete-685fc792.svg",
       "_app/immutable/assets/play-8408aa2d.svg"
     ]
   },
-  "src/routes/game/+page.svelte": {
-    "file": "_app/immutable/components/pages/game/_page.svelte-0dd7e3d4.js",
-    "src": "src/routes/game/+page.svelte",
+  "src/routes/play/+page.svelte": {
+    "file": "_app/immutable/components/pages/play/_page.svelte-f0579e84.js",
+    "src": "src/routes/play/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-18b70ca5.js",
-      "_SidebarLayout-e35b4d0b.js",
-      "_singletons-0556e34e.js"
+      "_index-35a657ee.js",
+      "_SidebarLayout-8ba9c7de.js",
+      "_singletons-c694b127.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-2a03a54d.css"
+      "_app/immutable/assets/_page-0163da07.css"
     ],
     "assets": [
       "_app/immutable/assets/red_mine-cc7afd62.jpg",
@@ -100,33 +96,33 @@
       "__layout-1daba58d.js"
     ]
   },
-  "_singletons-0556e34e.js": {
-    "file": "_app/immutable/chunks/singletons-0556e34e.js",
+  "_singletons-c694b127.js": {
+    "file": "_app/immutable/chunks/singletons-c694b127.js",
     "imports": [
-      "_index-18b70ca5.js"
+      "_index-35a657ee.js"
     ]
   },
-  "_index-18b70ca5.js": {
-    "file": "_app/immutable/chunks/index-18b70ca5.js"
+  "_index-35a657ee.js": {
+    "file": "_app/immutable/chunks/index-35a657ee.js"
   },
   "__layout-1daba58d.js": {
     "file": "_app/immutable/chunks/_layout-1daba58d.js"
   },
-  "_SidebarLayout-e35b4d0b.js": {
-    "file": "_app/immutable/chunks/SidebarLayout-e35b4d0b.js",
+  "_SidebarLayout-8ba9c7de.js": {
+    "file": "_app/immutable/chunks/SidebarLayout-8ba9c7de.js",
     "imports": [
-      "_index-18b70ca5.js",
-      "_singletons-0556e34e.js"
+      "_index-35a657ee.js",
+      "_singletons-c694b127.js"
     ],
     "css": [
-      "_app/immutable/assets/SidebarLayout-40906381.css"
+      "_app/immutable/assets/SidebarLayout-9bf65753.css"
     ],
     "assets": [
       "_app/immutable/assets/check-ce7a5ec0.svg"
     ]
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-67438df0.js",
+    "file": "_app/immutable/chunks/0-d4e38cd9.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
@@ -135,7 +131,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-ac1ea3ee.js",
+    "file": "_app/immutable/chunks/1-f4ac50a6.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -143,7 +139,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-f7c344bd.js",
+    "file": "_app/immutable/chunks/2-0fa5df6c.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -151,27 +147,27 @@
     ]
   },
   ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-324397a3.js",
+    "file": "_app/immutable/chunks/3-d4933217.js",
     "src": ".svelte-kit/generated/nodes/3.js",
     "isDynamicEntry": true,
     "imports": [
-      "src/routes/game/+page.svelte"
+      "src/routes/play/+page.svelte"
     ]
   },
   "src/routes/+layout.css": {
     "file": "_app/immutable/assets/_layout-ab9de344.css",
     "src": "src/routes/+layout.css"
   },
-  "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-c6385d83.css",
-    "src": "src/routes/+page.css"
-  },
-  "src/routes/game/+page.css": {
-    "file": "_app/immutable/assets/_page-2a03a54d.css",
-    "src": "src/routes/game/+page.css"
-  },
   "SidebarLayout.css": {
-    "file": "_app/immutable/assets/SidebarLayout-40906381.css",
+    "file": "_app/immutable/assets/SidebarLayout-9bf65753.css",
     "src": "SidebarLayout.css"
+  },
+  "src/routes/play/+page.css": {
+    "file": "_app/immutable/assets/_page-0163da07.css",
+    "src": "src/routes/play/+page.css"
+  },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/_page-9332dbc1.css",
+    "src": "src/routes/+page.css"
   }
 }

@@ -11,16 +11,16 @@
         <meta name="viewport" content="width=device-width" />
         <meta http-equiv="content-security-policy" content=""><title>MineSweeper</title>
 		<link href="/minesweeper/dev/_app/immutable/assets/_layout-ab9de344.css" rel="stylesheet">
-		<link href="/minesweeper/dev/_app/immutable/assets/_page-2a03a54d.css" rel="stylesheet">
-		<link href="/minesweeper/dev/_app/immutable/assets/SidebarLayout-40906381.css" rel="stylesheet">
-		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/start-f4fa33ad.js">
-		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/index-18b70ca5.js">
-		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/singletons-0556e34e.js">
-		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/components/pages/_layout.svelte-3f1c9e83.js">
+		<link href="/minesweeper/dev/_app/immutable/assets/_page-0163da07.css" rel="stylesheet">
+		<link href="/minesweeper/dev/_app/immutable/assets/SidebarLayout-9bf65753.css" rel="stylesheet">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/start-c1a55fdd.js">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/index-35a657ee.js">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/singletons-c694b127.js">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/components/pages/_layout.svelte-51d0e69c.js">
 		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js">
 		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/_layout-1daba58d.js">
-		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/components/pages/game/_page.svelte-0dd7e3d4.js">
-		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/SidebarLayout-e35b4d0b.js">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/components/pages/play/_page.svelte-f0579e84.js">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/SidebarLayout-8ba9c7de.js">
     </head>
     <body>
         
@@ -30,21 +30,21 @@
 <main class="wrapper svelte-18eget0"><aside class="sidebar svelte-18eget0"><header class="svelte-18eget0"><h1 id="title" class="svelte-18eget0">MineSweeper</h1>
             <h3 id="creator" class="svelte-18eget0">By SFG and TMH</h3></header>
         <hr class="svelte-18eget0">
-        </aside>
+        <div class="sidebar" slot="sidebar"><section class="stats svelte-l3neex"><p>undefined / undefined</p>
+            <p>00:00</p></section></div></aside>
 
     
 
-    <div class="wrapper svelte-vhtfvp" slot="content">
-        <p>Loading...</p>
+    <div class="wrapper svelte-l3neex" slot="content"><p>Loading...</p>
 
-        <dialog class="aftergame-modal svelte-vhtfvp"><div class="modal-main svelte-vhtfvp">
+        <dialog class="aftergame-modal svelte-l3neex"><div class="modal-main svelte-l3neex">
 
-                <div class="keep-game-wrapper svelte-vhtfvp"><p class="svelte-vhtfvp">Keep Game</p>
+                <div class="keep-game-wrapper svelte-l3neex"><p class="svelte-l3neex">Keep Game</p>
                     <div class="wrapper svelte-143f2yf" style="width: 1.5rem; height: 1.5rem;"><input type="checkbox" checked class="svelte-143f2yf" style="border-color: black;" checked>
     <img src="/minesweeper/dev/_app/immutable/assets/check-ce7a5ec0.svg" alt="" class="svelte-143f2yf">
 </div></div>
 
-                <div class="buttons-container-vertical svelte-vhtfvp"><button class="goto-menu">Back to Menu</button>
+                <div class="buttons-container-vertical svelte-l3neex"><button class="goto-menu">Back to Menu</button>
                     <button class="new-game">New Game</button></div></div>
             </dialog></div>
     <footer class="version svelte-18eget0">v0.2.0</footer>
@@ -53,8 +53,8 @@
 
 
 
-		<script type="module" data-sveltekit-hydrate="eokh12">
-			import { start } from "/minesweeper/dev/_app/immutable/start-f4fa33ad.js";
+		<script type="module" data-sveltekit-hydrate="h00ncy">
+			import { start } from "/minesweeper/dev/_app/immutable/start-c1a55fdd.js";
 
 			start({
 				env: {},
@@ -63,12 +63,12 @@
 					error: null,
 					node_ids: [0, 3],
 					params: {},
-					routeId: "game",
+					routeId: "play",
 					data: (function(a){return [a,a]}(null)),
 					form: null
 				},
 				paths: {"base":"/minesweeper/dev","assets":"/minesweeper/dev"},
-				target: document.querySelector('[data-sveltekit-hydrate="eokh12"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="h00ncy"]').parentNode,
 				trailing_slash: "never"
 			});
 		</script>
