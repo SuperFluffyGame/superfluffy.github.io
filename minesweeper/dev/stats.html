@@ -11,18 +11,17 @@
         <meta name="viewport" content="width=device-width" />
         <meta http-equiv="content-security-policy" content=""><title>MineSweeper</title>
 		<link href="/minesweeper/dev/_app/immutable/assets/_layout-ab9de344.css" rel="stylesheet">
-		<link href="/minesweeper/dev/_app/immutable/assets/_page-a91cbfad.css" rel="stylesheet">
-		<link href="/minesweeper/dev/_app/immutable/assets/MiniBoard-892c499b.css" rel="stylesheet">
 		<link href="/minesweeper/dev/_app/immutable/assets/SaveGamesSidebar-f08c317b.css" rel="stylesheet">
+		<link href="/minesweeper/dev/_app/immutable/assets/MiniBoard-892c499b.css" rel="stylesheet">
 		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/start-21327989.js">
 		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/index-35ca9ab3.js">
 		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/singletons-2a96e98d.js">
 		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/components/pages/_layout.svelte-2af4ee4b.js">
 		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js">
 		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/_layout-1daba58d.js">
-		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/components/pages/_page.svelte-0841cfff.js">
-		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/MiniBoard-edde8563.js">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/components/pages/stats/_page.svelte-85db5bfc.js">
 		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/SaveGamesSidebar-6d6b4e5e.js">
+		<link rel="modulepreload" href="/minesweeper/dev/_app/immutable/chunks/MiniBoard-edde8563.js">
     </head>
     <body>
         
@@ -61,38 +60,12 @@
 <div class="savegames svelte-154apux">
 </div></aside>
 
-    <div class="content svelte-fzypaa" slot="content"><section class="presets"><h2>Standard</h2>
-            <table class="svelte-fzypaa"><thead class="svelte-fzypaa"><th class="svelte-fzypaa">Difficulty</th>
-                    <th class="svelte-fzypaa">Size</th>
-                    <th class="svelte-fzypaa">Mines</th></thead>
-                <tbody><tr><td class="svelte-fzypaa">Easy</td>
-                        <td class="svelte-fzypaa">8x8</td>
-                        <td class="svelte-fzypaa">10</td>
-                        <td class="svelte-fzypaa"><button  class="unstyled normal medium svelte-na658s" style="padding: nullrem;">
-    Play
-                            
-</button></td></tr>
-                    <tr><td class="svelte-fzypaa">Medium</td>
-                        <td class="svelte-fzypaa">12x12</td>
-                        <td class="svelte-fzypaa">20</td>
-                        <td class="svelte-fzypaa"><button  class="unstyled normal medium svelte-na658s" style="padding: nullrem;">
-    Play
-                            
-</button></td></tr>
-                    <tr><td class="svelte-fzypaa">Hard</td>
-                        <td class="svelte-fzypaa">16x16</td>
-                        <td class="svelte-fzypaa">40</td>
-                        <td class="svelte-fzypaa"><button  class="unstyled normal medium svelte-na658s" style="padding: nullrem;">
-    Play
-                            
-</button></td></tr></tbody></table></section>
-        <section class="custom"><h2>Custom</h2>
-            <p>TODO!!!</p></section></div>
+    
     <footer class="version svelte-1xix0ss">v0.3.0</footer>
 </main>
 
 
-		<script type="module" data-sveltekit-hydrate="z609qw">
+		<script type="module" data-sveltekit-hydrate="1q61ant">
 			import { start } from "/minesweeper/dev/_app/immutable/start-21327989.js";
 
 			start({
@@ -100,14 +73,14 @@
 				hydrate: {
 					status: 200,
 					error: null,
-					node_ids: [0, 2],
+					node_ids: [0, 5],
 					params: {},
-					routeId: "",
+					routeId: "stats",
 					data: (function(a){return [a,a]}(null)),
 					form: null
 				},
 				paths: {"base":"/minesweeper/dev","assets":"/minesweeper/dev"},
-				target: document.querySelector('[data-sveltekit-hydrate="z609qw"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="1q61ant"]').parentNode,
 				trailing_slash: "never"
 			});
 		</script>
