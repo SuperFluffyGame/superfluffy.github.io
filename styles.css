@@ -46,6 +46,10 @@ td:first-child {
     justify-content: center;
     align-items: center;
 }
+
+a {
+    color: lightblue;
+}
 a:hover {
     filter: brightness(80%);
 }
