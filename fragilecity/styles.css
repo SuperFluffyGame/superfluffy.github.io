@@ -57,8 +57,7 @@ td:nth-child(3) {
     width: 100%;
 }
 .leaderboard {
-    min-width: 18rem;
-    width: 18rem;
+    min-width: 17rem;
 }
 
 .info {

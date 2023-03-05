@@ -1,4 +1,4 @@
-import { getCityNetWorth, leaderboard } from "./calc.js";
+import { getCityNetWorth, leaderboard, sumCities } from "./calc.js";
 
 const FRAGILE_URL = "https://fragile.city/";
 
@@ -83,6 +83,8 @@ function makeLeaderboard(
     if (filter0) {
         lbData = lbData.filter(v => v[1] !== 0);
     }
+    const totalData = sumCities(citiesJson, getFn);
+    nameEl.textContent += ` (${NUMBER_FORMATTER.format(totalData)})`;
 
     for (let i = 0; i < lbData.length; i++) {
         const entry = lbData[i];
