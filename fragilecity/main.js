@@ -17,26 +17,14 @@ const mainJson = await (await fetch("./data/main.json")).json();
 
 const YearEl = document.querySelector("#year");
 const DayEl = document.querySelector("#day");
-const NetWorthEl = document.querySelector("#net-worth");
-const CitizensEl = document.querySelector("#citizens");
+const Leaderboards = document.querySelector(".leaderboards");
 
 YearEl.textContent = mainJson.year;
 DayEl.textContent = mainJson.day;
 
-const netWorthLb = leaderboard(citiesJson, c => getCityNetWorth(c)).slice(
-    0,
-    100
-);
-const citizenLb = leaderboard(citiesJson, c => c.totalCitizens).slice(0, 100);
-
-for (let i = 0; i < citizenLb.length; i++) {
-    const entry = citizenLb[i];
-    CitizensEl.append(getTableRowFromEntry(i, entry));
-}
-for (let i = 0; i < netWorthLb.length; i++) {
-    const entry = netWorthLb[i];
-    NetWorthEl.append(getTableRowFromEntry(i, entry, true));
-}
+makeLeaderboard("Citizens", c => c.totalCitizens);
+makeLeaderboard("Net Worth", c => getCityNetWorth(c), true);
+makeLeaderboard("Air Bases", c => c.buildings["air_bases"]);
 
 function getTableRowFromEntry(i, entry, doFormatMoney = false) {
     const tr = document.createElement("tr");
@@ -64,4 +52,25 @@ function getCityLink(cityName) {
     a.textContent = cityName;
 
     return a;
+}
+
+function makeLeaderboard(name, getFn, useCurrency) {
+    const containerDiv = document.createElement("div");
+    containerDiv.classList.add("leaderboard");
+    const nameEl = document.createElement("h3");
+    nameEl.textContent = name;
+    containerDiv.appendChild(nameEl);
+
+    const lbDiv = document.createElement("div");
+
+    const lbData = leaderboard(citiesJson, getFn).slice(0, 100);
+
+    for (let i = 0; i < lbData.length; i++) {
+        const entry = lbData[i];
+        lbDiv.append(getTableRowFromEntry(i, entry, useCurrency));
+    }
+
+    containerDiv.appendChild(lbDiv);
+
+    Leaderboards.appendChild(containerDiv);
 }
