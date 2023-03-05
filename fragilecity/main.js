@@ -3,6 +3,7 @@ import {
     getCityProfit,
     leaderboard,
     sumCities,
+    sumCitiesArray,
 } from "./calc.js";
 
 const FRAGILE_URL = "https://fragile.city/";
@@ -16,6 +17,7 @@ const MONEY_FORMATTER = Intl.NumberFormat("en-us", {
 const NUMBER_FORMATTER = Intl.NumberFormat("en-us", {
     notation: "compact",
 });
+const LONG_NUMBER_FORMATTER = Intl.NumberFormat("en-us");
 
 const citiesJson = await (await fetch("./data/cities.json")).json();
 const mainJson = await (await fetch("./data/main.json")).json();
@@ -23,11 +25,18 @@ const mainJson = await (await fetch("./data/main.json")).json();
 const YearEl = document.querySelector("#year");
 const DayEl = document.querySelector("#day");
 const Leaderboards = document.querySelector(".leaderboards");
+const CitizenSpans = document.querySelectorAll(".citizen-cell");
 
 YearEl.textContent = mainJson.year;
 DayEl.textContent = mainJson.day;
 
-makeLeaderboard("Citizens", c => c.totalCitizens);
+const citizenSums = sumCitiesArray(citiesJson, c => c.citizens);
+for (let i = 0; i < CitizenSpans.length; i++) {
+    const span = CitizenSpans.item(i);
+    span.textContent = LONG_NUMBER_FORMATTER.format(citizenSums[i]);
+}
+
+// makeLeaderboard("Citizens", c => c.totalCitizens);
 makeLeaderboard("Net Worth", c => getCityNetWorth(c), { useCurrency: true });
 makeLeaderboard("Profit", c => getCityProfit(c), { useCurrency: true });
 makeLeaderboard("Air Bases", c => c.buildings["air_bases"], { filter: 0 });

@@ -25,9 +25,14 @@ hr {
     background-color: #222;
     border: 0.1rem solid cadetblue;
     padding: 0.5rem;
+    margin-block: 1rem;
     top: 0;
     left: 0;
-    margin: 1rem;
+    /* left: 50%;
+    transform: translate(-50%); */
+
+    display: flex;
+    gap: 3rem;
 }
 
 table {
@@ -51,21 +56,39 @@ td:nth-child(3) {
 }
 
 .leaderboards {
-    margin-top: 8rem;
     display: flex;
     gap: 2rem;
     width: 100%;
+    margin-top: 8rem;
 }
 .leaderboard {
     min-width: 17rem;
 }
 
-.info {
+.main-info {
     /* width: 20rem; */
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
-.info > hr {
+.main-info > hr {
     flex: 1;
+}
+
+#citizens {
+    width: fit-content;
+}
+#citizens th {
+    width: 5rem;
+    text-align: left;
+}
+
+#citizens td {
+    padding: 0.25rem 0.5rem;
+    width: 3.5rem;
+    border: 1px solid #aaa;
+    text-align: right;
+}
+h4 {
+    margin-block: 1rem;
 }

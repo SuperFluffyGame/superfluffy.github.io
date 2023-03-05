@@ -11,13 +11,29 @@
     </head>
     <body>
         <div class="header">
-            <a href="./data/cities.json">All cities in json.</a>
-            <a href="./data/main.json">Main stats in json.</a>
+            <div class="block1">
+                <a href="./data/cities.json">All cities in json.</a>
+                <a href="./data/main.json">Main stats in json.</a>
 
-            <div class="info">
-                <h3>Year: <span id="year"></span></h3>
-                <hr />
-                <h3>Day: <span id="day"></span></h3>
+                <div class="main-info">
+                    <h3>Year: <span id="year"></span></h3>
+                    <hr />
+                    <h3>Day: <span id="day"></span></h3>
+                </div>
+            </div>
+
+            <div class="block2">
+                <div class="game-info">
+                    <table id="citizens">
+                        <th>Citizens:</th>
+                        <td class="citizen-cell"></td>
+                        <td class="citizen-cell"></td>
+                        <td class="citizen-cell"></td>
+                        <td class="citizen-cell"></td>
+                        <td class="citizen-cell"></td>
+                        <td class="citizen-cell"></td>
+                    </table>
+                </div>
             </div>
         </div>
 
