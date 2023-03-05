@@ -7,6 +7,7 @@
         <title>Fragile City Stats</title>
 
         <script src="./main.js" defer type="module"></script>
+        <link rel="stylesheet" href="./styles.css" />
     </head>
     <body>
         <a href="./data/cities.json">All cities in json.</a>
@@ -14,7 +15,15 @@
 
         <h3>Year: <span id="year"></span>. Day: <span id="day"></span></h3>
 
-        <h3>Net Worth</h3>
-        <div id="net-worth"></div>
+        <div class="leaderboards">
+            <div class="leaderboard">
+                <h3>Citizens</h3>
+                <div id="citizens" class="leaderboard-table"></div>
+            </div>
+            <div class="leaderboard">
+                <h3>Net Worth</h3>
+                <div id="net-worth" class="leaderboard-table"></div>
+            </div>
+        </div>
     </body>
 </html>
