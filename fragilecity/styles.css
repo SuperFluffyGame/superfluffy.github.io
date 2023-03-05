@@ -19,6 +19,16 @@ hr {
     width: 100%;
 }
 
+.header {
+    position: fixed;
+    background-color: #222;
+    border: 0.1rem solid cadetblue;
+    padding: 0.5rem;
+    top: 0;
+    left: 0;
+    margin: 1rem;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -40,9 +50,12 @@ td:nth-child(3) {
 }
 
 .leaderboards {
+    margin-top: 8rem;
     display: flex;
     gap: 2rem;
+    width: 100%;
 }
 .leaderboard {
+    min-width: 18rem;
     width: 18rem;
 }

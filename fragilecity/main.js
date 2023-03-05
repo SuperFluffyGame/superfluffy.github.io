@@ -25,6 +25,18 @@ DayEl.textContent = mainJson.day;
 makeLeaderboard("Citizens", c => c.totalCitizens);
 makeLeaderboard("Net Worth", c => getCityNetWorth(c), { useCurrency: true });
 makeLeaderboard("Air Bases", c => c.buildings["air_bases"], { filter0: true });
+makeLeaderboard("Shield Cap", c => c.resources["Shields"]?.[1] ?? 0, {
+    filter0: true,
+});
+makeLeaderboard("Energy", c => c.resources["Energy"]?.[1] ?? 0, {
+    filter0: true,
+});
+makeLeaderboard("Fun", c => c.resources["Fun"]?.[0] ?? 0, {
+    filter0: true,
+});
+makeLeaderboard("Health", c => c.resources["Health"]?.[0] ?? 0, {
+    filter0: true,
+});
 
 function getTableRowFromEntry(i, entry, doFormatMoney = false) {
     const tr = document.createElement("tr");
