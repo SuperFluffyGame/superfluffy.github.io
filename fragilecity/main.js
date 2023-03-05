@@ -23,8 +23,8 @@ YearEl.textContent = mainJson.year;
 DayEl.textContent = mainJson.day;
 
 makeLeaderboard("Citizens", c => c.totalCitizens);
-makeLeaderboard("Net Worth", c => getCityNetWorth(c), true);
-makeLeaderboard("Air Bases", c => c.buildings["air_bases"]);
+makeLeaderboard("Net Worth", c => getCityNetWorth(c), { useCurrency: true });
+makeLeaderboard("Air Bases", c => c.buildings["air_bases"], { filter0: true });
 
 function getTableRowFromEntry(i, entry, doFormatMoney = false) {
     const tr = document.createElement("tr");
@@ -54,16 +54,23 @@ function getCityLink(cityName) {
     return a;
 }
 
-function makeLeaderboard(name, getFn, useCurrency) {
+function makeLeaderboard(
+    name,
+    getFn,
+    { useCurrency = false, filter0 = false } = {}
+) {
     const containerDiv = document.createElement("div");
     containerDiv.classList.add("leaderboard");
     const nameEl = document.createElement("h3");
     nameEl.textContent = name;
     containerDiv.appendChild(nameEl);
 
-    const lbDiv = document.createElement("div");
+    const lbDiv = document.createElement("table");
 
-    const lbData = leaderboard(citiesJson, getFn).slice(0, 100);
+    let lbData = leaderboard(citiesJson, getFn).slice(0, 100);
+    if (filter0) {
+        lbData = lbData.filter(v => v[1] !== 0);
+    }
 
     for (let i = 0; i < lbData.length; i++) {
         const entry = lbData[i];
