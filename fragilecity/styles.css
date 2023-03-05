@@ -2,6 +2,7 @@ html {
     color: #ddd;
     background-color: #222;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0.25rem;
 }
 
 a {
@@ -58,4 +59,14 @@ td:nth-child(3) {
 .leaderboard {
     min-width: 18rem;
     width: 18rem;
+}
+
+.info {
+    /* width: 20rem; */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.info > hr {
+    flex: 1;
 }
