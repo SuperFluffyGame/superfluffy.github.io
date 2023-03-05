@@ -24,6 +24,11 @@ DayEl.textContent = mainJson.day;
 
 makeLeaderboard("Citizens", c => c.totalCitizens);
 makeLeaderboard("Net Worth", c => getCityNetWorth(c), { useCurrency: true });
+makeLeaderboard(
+    "Profit",
+    c => c.resources["Daily Tax Income"]?.[0] - c.resources["Daily Cost"]?.[0],
+    { useCurrency: true }
+);
 makeLeaderboard("Air Bases", c => c.buildings["air_bases"], { filter: 0 });
 makeLeaderboard("Shield Cap", c => c.resources["Shields"]?.[1] ?? 0, {
     filter: 50,
