@@ -24,18 +24,18 @@ DayEl.textContent = mainJson.day;
 
 makeLeaderboard("Citizens", c => c.totalCitizens);
 makeLeaderboard("Net Worth", c => getCityNetWorth(c), { useCurrency: true });
-makeLeaderboard("Air Bases", c => c.buildings["air_bases"], { filter0: true });
+makeLeaderboard("Air Bases", c => c.buildings["air_bases"], { filter: 0 });
 makeLeaderboard("Shield Cap", c => c.resources["Shields"]?.[1] ?? 0, {
-    filter0: true,
+    filter: 50,
 });
 makeLeaderboard("Energy", c => c.resources["Energy"]?.[1] ?? 0, {
-    filter0: true,
+    filter: 0,
 });
 makeLeaderboard("Fun", c => c.resources["Fun"]?.[0] ?? 0, {
-    filter0: true,
+    filter: 0,
 });
 makeLeaderboard("Health", c => c.resources["Health"]?.[0] ?? 0, {
-    filter0: true,
+    filter: 0,
 });
 
 function getTableRowFromEntry(i, entry, doFormatMoney = false) {
@@ -69,7 +69,7 @@ function getCityLink(cityName) {
 function makeLeaderboard(
     name,
     getFn,
-    { useCurrency = false, filter0 = false } = {}
+    { useCurrency = false, filter = null } = {}
 ) {
     const containerDiv = document.createElement("div");
     containerDiv.classList.add("leaderboard");
@@ -80,11 +80,14 @@ function makeLeaderboard(
     const lbDiv = document.createElement("table");
 
     let lbData = leaderboard(citiesJson, getFn).slice(0, 100);
-    if (filter0) {
-        lbData = lbData.filter(v => v[1] !== 0);
+    if (filter !== null) {
+        lbData = lbData.filter(v => v[1] > filter);
     }
     const totalData = sumCities(citiesJson, getFn);
-    nameEl.textContent += ` (${NUMBER_FORMATTER.format(totalData)})`;
+    nameEl.textContent += ` (${(useCurrency
+        ? MONEY_FORMATTER
+        : NUMBER_FORMATTER
+    ).format(totalData)})`;
 
     for (let i = 0; i < lbData.length; i++) {
         const entry = lbData[i];
