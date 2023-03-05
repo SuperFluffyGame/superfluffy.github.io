@@ -66,3 +66,22 @@ export function leaderboard(cities, getVal) {
         })
         .map(c => [c.name, getVal(c) ?? 0]);
 }
+
+export function getMissilesLaunched(cities) {
+    const playerMissiles = {};
+
+    for (const city of cities) {
+        for (const attacker in city.attacks) {
+            if (!(attacker in playerMissiles)) {
+                playerMissiles[attacker] = 0;
+            }
+            playerMissiles[attacker] += city.attacks[attacker];
+        }
+    }
+    return playerMissiles;
+}
+export function missilesLaunchedLeaderboard(cities) {
+    const launched = getMissilesLaunched(cities);
+
+    return Object.entries(launched).sort((a, b) => b[1] - a[1]);
+}

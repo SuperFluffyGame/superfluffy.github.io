@@ -92,3 +92,14 @@ td:nth-child(3) {
 h4 {
     margin-block: 1rem;
 }
+
+.info-list {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+.listing {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

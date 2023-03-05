@@ -1,7 +1,9 @@
 import {
     getCityNetWorth,
     getCityProfit,
+    getMissilesLaunched,
     leaderboard,
+    missilesLaunchedLeaderboard,
     sumCities,
     sumCitiesArray,
 } from "./calc.js";
@@ -26,15 +28,21 @@ const YearEl = document.querySelector("#year");
 const DayEl = document.querySelector("#day");
 const Leaderboards = document.querySelector(".leaderboards");
 const CitizenSpans = document.querySelectorAll(".citizen-cell");
+const InfoList = document.querySelector(".info-list");
 
 YearEl.textContent = mainJson.year;
 DayEl.textContent = mainJson.day;
 
+// citizens
 const citizenSums = sumCitiesArray(citiesJson, c => c.citizens);
 for (let i = 0; i < CitizenSpans.length; i++) {
     const span = CitizenSpans.item(i);
     span.textContent = LONG_NUMBER_FORMATTER.format(citizenSums[i]);
 }
+
+makeInfoListing("Total Citizens", mainJson.totalPopulation);
+makeInfoListing("Pollution", mainJson.totalPollution);
+makeInfoListing("Pollution/day", mainJson.dailyPollution);
 
 // makeLeaderboard("Citizens", c => c.totalCitizens);
 makeLeaderboard("Net Worth", c => getCityNetWorth(c), { useCurrency: true });
@@ -43,6 +51,13 @@ makeLeaderboard("Air Bases", c => c.buildings["air_bases"], { filter: 0 });
 makeLeaderboard("Shield Cap", c => c.resources["Shields"]?.[1] ?? 0, {
     filter: 50,
 });
+const missilesLaunched = missilesLaunchedLeaderboard(citiesJson);
+makeLeaderboardFromData(
+    "Missiles Launched",
+    missilesLaunched,
+    c => missilesLaunched.find(m => m[0] === c.name)?.[1] ?? 0
+);
+
 makeLeaderboard("Energy", c => c.resources["Energy"]?.[1] ?? 0, {
     filter: 0,
 });
@@ -81,11 +96,42 @@ function getCityLink(cityName) {
     return a;
 }
 
+function makeInfoListing(name, value) {
+    const listing = document.createElement("span");
+    listing.classList.add("listing");
+
+    const heading = document.createElement("h4");
+    heading.innerText = name + ":";
+
+    const valueEl = document.createElement("span");
+    valueEl.textContent = NUMBER_FORMATTER.format(value);
+
+    listing.append(heading, valueEl);
+
+    InfoList.appendChild(listing);
+}
+
 function makeLeaderboard(
     name,
     getFn,
     { useCurrency = false, filter = null } = {}
 ) {
+    let lbData = leaderboard(citiesJson, getFn).slice(0, 100);
+    if (filter !== null) {
+        lbData = lbData.filter(v => v[1] > filter);
+    }
+
+    makeLeaderboardFromData(name, lbData, getFn, { useCurrency });
+}
+
+function makeLeaderboardFromData(
+    name,
+    lbData,
+    getFn,
+    { useCurrency = false } = {}
+) {
+    const totalData = sumCities(citiesJson, getFn);
+
     const containerDiv = document.createElement("div");
     containerDiv.classList.add("leaderboard");
     const nameEl = document.createElement("h3");
@@ -94,11 +140,6 @@ function makeLeaderboard(
 
     const lbDiv = document.createElement("table");
 
-    let lbData = leaderboard(citiesJson, getFn).slice(0, 100);
-    if (filter !== null) {
-        lbData = lbData.filter(v => v[1] > filter);
-    }
-    const totalData = sumCities(citiesJson, getFn);
     nameEl.textContent += ` (${(useCurrency
         ? MONEY_FORMATTER
         : NUMBER_FORMATTER
