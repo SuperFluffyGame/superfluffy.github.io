@@ -94,12 +94,18 @@ function getTableRowFromEntry(
 ) {
     const tr = document.createElement("tr");
 
-    const hr = document.createElement("hr");
-
     const posTd = document.createElement("td");
     posTd.textContent = i + 1;
     const nameTd = document.createElement("td");
-    nameTd.appendChild(getCityLink(entry[0]));
+
+    const link = getCityLink(entry[0]);
+    const city = citiesJson.find(c => c.name === entry[0]);
+
+    const citCountEl = document.createElement("span");
+    citCountEl.classList.add("citizen-count");
+    citCountEl.textContent = `(${NUMBER_FORMATTER.format(city.totalCitizens)})`;
+
+    nameTd.append(link, citCountEl);
 
     const valTd = document.createElement("td");
     valTd.textContent = useCurrency
