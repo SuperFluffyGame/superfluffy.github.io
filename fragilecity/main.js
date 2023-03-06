@@ -64,6 +64,12 @@ makeLeaderboardFromData("Employment Rate", employmentLeaderboard, null, {
     usePercent: true,
     total: false,
 });
+makeLeaderboard(
+    "Jobs",
+    c =>
+        (c.resources["Jobs"]?.[1] ?? 0) -
+        (c.buildings["distribution_centers"] ?? 0) * 250
+);
 
 makeLeaderboard("Air Bases", c => c.buildings["air_bases"], { filter: 0 });
 makeLeaderboard("Shield Cap", c => c.resources["Shields"]?.[1] ?? 0, {
