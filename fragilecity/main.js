@@ -1,6 +1,7 @@
 import {
     getCityNetWorth,
     getCityProfit,
+    getEmploymentRate,
     getMissilesLaunched,
     leaderboard,
     missilesLaunchedLeaderboard,
@@ -47,6 +48,23 @@ makeInfoListing("Pollution/day", mainJson.dailyPollution);
 // makeLeaderboard("Citizens", c => c.totalCitizens);
 makeLeaderboard("Net Worth", c => getCityNetWorth(c), { useCurrency: true });
 makeLeaderboard("Profit", c => getCityProfit(c), { useCurrency: true });
+
+const citizenLeaderboard = leaderboard(citiesJson, c => c.totalCitizens).slice(
+    0,
+    100
+);
+const citizenLeaderboardCities = citizenLeaderboard.map(([name]) => {
+    return citiesJson.find(c => c.name === name);
+});
+const employmentLeaderboard = leaderboard(
+    citizenLeaderboardCities,
+    c => getEmploymentRate(c) * 100
+).slice(0, 100);
+makeLeaderboardFromData("Employment Rate", employmentLeaderboard, null, {
+    usePercent: true,
+    total: false,
+});
+
 makeLeaderboard("Air Bases", c => c.buildings["air_bases"], { filter: 0 });
 makeLeaderboard("Shield Cap", c => c.resources["Shields"]?.[1] ?? 0, {
     filter: 50,
@@ -68,7 +86,12 @@ makeLeaderboard("Health", c => c.resources["Health"]?.[0] ?? 0, {
     filter: 0,
 });
 
-function getTableRowFromEntry(i, entry, doFormatMoney = false) {
+function getTableRowFromEntry(
+    i,
+    entry,
+    useCurrency = false,
+    usePercent = false
+) {
     const tr = document.createElement("tr");
 
     const hr = document.createElement("hr");
@@ -79,9 +102,11 @@ function getTableRowFromEntry(i, entry, doFormatMoney = false) {
     nameTd.appendChild(getCityLink(entry[0]));
 
     const valTd = document.createElement("td");
-    valTd.textContent = doFormatMoney
+    valTd.textContent = useCurrency
         ? MONEY_FORMATTER.format(entry[1])
         : NUMBER_FORMATTER.format(entry[1]);
+
+    if (usePercent) valTd.textContent += "%";
 
     tr.append(posTd, nameTd, valTd);
 
@@ -114,23 +139,23 @@ function makeInfoListing(name, value) {
 function makeLeaderboard(
     name,
     getFn,
-    { useCurrency = false, filter = null } = {}
+    { useCurrency = false, filter = null, usePercent = false } = {}
 ) {
     let lbData = leaderboard(citiesJson, getFn).slice(0, 100);
     if (filter !== null) {
         lbData = lbData.filter(v => v[1] > filter);
     }
 
-    makeLeaderboardFromData(name, lbData, getFn, { useCurrency });
+    makeLeaderboardFromData(name, lbData, getFn, { useCurrency, usePercent });
 }
 
 function makeLeaderboardFromData(
     name,
     lbData,
     getFn,
-    { useCurrency = false } = {}
+    { useCurrency = false, total = true, usePercent = false } = {}
 ) {
-    const totalData = sumCities(citiesJson, getFn);
+    const totalData = total ? sumCities(citiesJson, getFn) : null;
 
     const containerDiv = document.createElement("div");
     containerDiv.classList.add("leaderboard");
@@ -140,17 +165,21 @@ function makeLeaderboardFromData(
 
     const lbDiv = document.createElement("table");
 
-    nameEl.textContent += ` (${(useCurrency
-        ? MONEY_FORMATTER
-        : NUMBER_FORMATTER
-    ).format(totalData)})`;
+    if (total) {
+        nameEl.textContent += ` (${(useCurrency
+            ? MONEY_FORMATTER
+            : NUMBER_FORMATTER
+        ).format(totalData)})`;
+    }
 
     for (let i = 0; i < lbData.length; i++) {
         const entry = lbData[i];
-        lbDiv.append(getTableRowFromEntry(i, entry, useCurrency));
+        lbDiv.append(getTableRowFromEntry(i, entry, useCurrency, usePercent));
     }
 
     containerDiv.appendChild(lbDiv);
 
     Leaderboards.appendChild(containerDiv);
+
+    return lbData;
 }

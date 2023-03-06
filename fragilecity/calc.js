@@ -85,3 +85,15 @@ export function missilesLaunchedLeaderboard(cities) {
 
     return Object.entries(launched).sort((a, b) => b[1] - a[1]);
 }
+
+export function getUsedJobs(city) {
+    const jobs = city.resources["Jobs"];
+    return (jobs?.[1] ?? 0) - (jobs?.[0] ?? 0);
+}
+
+export function getEmploymentRate(city) {
+    const usedJobs = getUsedJobs(city);
+    const pop = city.totalCitizens;
+
+    return (usedJobs ?? 0) / (pop ?? 0);
+}
