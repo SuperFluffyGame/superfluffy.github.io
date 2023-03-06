@@ -88,7 +88,7 @@ table {
     display: flex;
     gap: 2rem;
     width: 100%;
-    margin-top: 7rem;
+    margin-top: 6.5rem;
 }
 .leaderboard {
     min-width: 18rem;
@@ -135,6 +135,9 @@ h4 {
     align-self: center;
 }
 
+.block2 {
+    transform: translate(0, -0.5rem);
+}
 .block-group {
     display: contents;
 }
