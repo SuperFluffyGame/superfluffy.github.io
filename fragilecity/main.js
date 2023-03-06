@@ -76,6 +76,14 @@ makeLeaderboardFromData(
     c => missilesLaunched.find(m => m[0] === c.name)?.[1] ?? 0
 );
 
+makeLeaderboard(
+    "Citizen Upgrades",
+    c => c.logs?.eduUpgrades?.reduce((t, n) => t + n, 0) ?? 0,
+    {
+        filter: 0,
+    }
+);
+
 makeLeaderboard("Energy", c => c.resources["Energy"]?.[1] ?? 0, {
     filter: 0,
 });
