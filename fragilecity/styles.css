@@ -67,17 +67,17 @@ table {
     width: 100%;
 }
 
-td {
+.leaderboard td {
     border-block: 1px solid #aaa;
     padding: 0.25rem;
     font-size: 0.9rem;
 }
 
-td:nth-child(1) {
+.leaderboard td:nth-child(1) {
     text-align: center;
 }
 
-td:nth-child(3) {
+.leaderboard td:nth-child(3) {
     text-align: right;
     width: 3rem;
 }
@@ -100,12 +100,19 @@ td:nth-child(3) {
     text-align: left;
 }
 
-#citizens td {
+#citizens .citizen-cell {
     padding: 0.25rem 0.5rem;
     width: 3.5rem;
     border: 1px solid #aaa;
     text-align: right;
 }
+.citizen-level {
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
 h4 {
     margin-block: 1rem;
 }
@@ -119,4 +126,8 @@ h4 {
 .citizen-count {
     color: gray;
     margin-left: 0.5rem;
+}
+
+.block3 {
+    align-self: center;
 }
