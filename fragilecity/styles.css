@@ -28,11 +28,38 @@ hr {
     margin: 1rem;
     top: 0;
     left: 0;
+    width: calc(100% - 2rem);
+    box-sizing: border-box;
     /* left: 50%;
     transform: translate(-50%); */
 
     display: flex;
     gap: 3rem;
+}
+.header h3 {
+    margin: 0rem;
+}
+.header h4 {
+    margin: 0rem;
+}
+.main-info {
+    /* width: 20rem; */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+}
+.main-info > hr {
+    flex: 1;
+}
+
+.info-list {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 0.45rem;
+    margin-bottom: 0.4rem;
 }
 
 table {
@@ -65,16 +92,6 @@ td:nth-child(3) {
     min-width: 17rem;
 }
 
-.main-info {
-    /* width: 20rem; */
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-.main-info > hr {
-    flex: 1;
-}
-
 #citizens {
     width: fit-content;
 }
@@ -93,11 +110,6 @@ h4 {
     margin-block: 1rem;
 }
 
-.info-list {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-}
 .listing {
     display: flex;
     align-items: center;
