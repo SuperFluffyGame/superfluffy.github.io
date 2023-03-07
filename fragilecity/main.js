@@ -70,6 +70,9 @@ makeLeaderboard("Air Bases", c => c.buildings["air_bases"], { filter: 0 });
 makeLeaderboard("Shield Cap", c => c.resources["Shields"]?.[1] ?? 0, {
     filter: 50,
 });
+makeLeaderboard("Shield Production", c => c.buildings["defense_bases"] ?? 0, {
+    filter: 0,
+});
 const missilesLaunched = missilesLaunchedLeaderboard(citiesJson);
 makeLeaderboardFromData(
     "Missiles Launched",
