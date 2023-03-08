@@ -45,7 +45,7 @@ export function getCityNetWorth(c) {
 
 export function getBuildingCost(building, n) {
     // cost * round((current_count-1)^2+1)
-    const initialCost = BuildingsJson[building];
+    const initialCost = BuildingsJson[building] ?? 0;
     const price = initialCost * Math.round(Math.pow(n - 1, 2) + 1);
 
     return price;
